@@ -1,3 +1,5 @@
+#!/bin/bash
+set -euo pipefail
 
 # All basic dev tools for Ubuntu 22.04
 
@@ -30,20 +32,20 @@ sudo apt-get -qq -y install wget
 
 # All dependencies for bcftools Docker
 echo "Installing Docker"
-sudo apt-get -qq -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#sudo apt-get -qq -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+#sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 sudo apt-get -qq -y update
-sudo apt-get -qq -y install docker-ce
-sudo systemctl start docker
+#sudo apt-get -qq -y install docker-ce
+#sudo systemctl start docker
 
-sudo docker --version
+#sudo docker --version
 
-echo "Running Docker installation hello world!! test"
-sudo docker run hello-world
+#echo "Running Docker installation hello world!! test"
+#sudo docker run hello-world
 
 #echo "Creating and activating a conda environment"
 #source setup_env.sh deepvaraint_env
